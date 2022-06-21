@@ -2,16 +2,257 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Барбершоп «Бородинский»</title>
+  <title>Интернет-магазин кофейных напитков</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
   <header class="header">
+    <a href="#" class="header__logo">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" width="32" height="36" alt="Интернет-магазин кофейных напитков">
+      </picture>
+      <span class="header__logo-text">Интернет-магазин кофейных напитков</span>
+    </a>
+
     <nav class="header__nav">
-      <p>djdfaf</p>
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#">Главная</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Каталог</a>
+        </li>
+        <li class="header__item">
+          <a href="#">Доставка</a>
+        </li>
+        <li class="header__item">
+          <a href="#">О нас</a>
+        </li>
+      </ul>
     </nav>
+
+    <ul class="header__list-user">
+      <li class="header__item-user">
+        <a href="#">
+          <span>Войти</span>
+        </a>
+      </li>
+      <li class="header__item-user">
+        <a href="#">
+          <span>Корзина</span>
+        </a>
+      </li>
+    </ul>
+
   </header>
+
+  <main>
+    <section>
+      <ul>
+        <li>
+          <img src="/" alt="">
+          <div class="">
+            <div class="">Новинка!</div>
+            <h2>Декаф Флэт Уайт</h2>
+            <p>Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div>
+              <div>295₽</div>
+              <div class="">225₽</div>
+              <button>Заказать</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Преимущества</h2>
+      <p>Главные причины выбрать Drink2Go</p>
+      <ul>
+        <li>
+          <img src="/" alt="">
+          <div class="">
+            <h3>Скорость</h3>
+            <p>Готовый напиток всегда под рукой — просто открой банку</p>
+          </div>
+        </li>
+        <li>
+          <img src="/" alt="">
+          <div class="">
+            <h3>Удобство</h3>
+            <p>Легко помещается и в карман, и в маленькую сумочку</p>
+          </div>
+        </li>
+        <li>
+          <img src="/" alt="">
+          <div class="">
+            <h3>Бодрость</h3>
+            <p>Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </div>
+        </li>
+        <li>
+          <img src="/" alt="">
+          <div class="">
+            <h3>Экологичность</h3>
+            <p>Вся упаковка сделана из перерабатываемых материалов</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Каталог</h2>
+      <p>Каталог кофейных напитков</p>
+      <form action="" method="post">
+        <fieldset>
+          <legend>Цена</legend>
+          <input type="range" name="" id="">
+          <input type="text" name="" id="" value="0">
+          <input type="text" name="" id="" value="900">
+        </fieldset>
+
+        <fieldset>
+          <legend>Наличие молока</legend>
+          <label for="">
+            <input type="radio" name="" id="">
+            Неважно
+          </label>
+          <label for="">
+            <input type="radio" name="" id="">
+            Только животное
+          </label>
+          <label for="">
+            <input type="radio" name="" id="">
+            Только растительное
+          </label>
+          <label for="">
+            <input type="radio" name="" id="" disabled>
+            Без молока
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Страна произрастания</legend>
+          <label for="">
+            <input type="checkbox" name="" id="">
+            Бразилия
+          </label>
+          <label for="">
+            <input type="checkbox" name="" id="">
+            Эфиопия
+          </label>
+          <label for="">
+            <input type="checkbox" name="" id="">
+            Колумбия
+          </label>
+          <label for="">
+            <input type="checkbox" name="" id="">
+            Коста-Рика
+          </label>
+          <label for="">
+            <input type="checkbox" name="" id="" disabled>
+            Перу
+          </label>
+        </fieldset>
+        <button type="reset"></button>
+      </form>
+      <div class="">
+        <div class="">Сортировка:</div>
+        <a href="#">по умолчанию</a>
+      </div>
+      <ul>
+        <li>
+          <div class="">
+            <img src="/" alt="">
+          </div>
+          <h3>Декаф Флэт Уайт</h3>
+          <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+          <div class="">
+            <span>225₽</span>
+            <button>
+              <img src="/" alt="">
+              В корзину
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div class="">
+        <button><img src="" alt=""></button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button><img src="" alt=""></button>
+      </div>
+    </section>
+
+    <section>
+      <div class="">
+        maps
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <div class="logo">logo</div>
+      <ul class="social">
+        <li><a href="#"><img src="/" alt=""></a></li>
+        <li><a href="#"><img src="/" alt=""></a></li>
+        <li><a href="#"><img src="/" alt=""></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Интернет-магазин</h2>
+      <ul>
+        <li>
+          <a href="#">Каталог</a>
+        </li>
+        <li>
+          <a href="#">Доставка</a>
+        </li>
+        <li>
+          <a href="#">Способы оплаты</a>
+        </li>
+        <li>
+          <a href="#">О нас</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Медиа</h2>
+      <ul>
+        <li>
+          <a href="#">Блог</a>
+        </li>
+        <li>
+          <a href="#">Информация для СМИ</a>
+        </li>
+        <li>
+          <a href="#">Правовая информация</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Контакты</h2>
+      <ul>
+        <li>
+          <img src="" alt="">
+          <a href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+        </li>
+        <li>
+          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </li>
+      </ul>
+    </section>
+    <div class="">
+      <a href="#">Разработано в HTML Academy</a>
+      <img src="" alt="">
+    </div>
+  </footer>
 <script src="js/script.js"></script>
 </body>
 </html>
