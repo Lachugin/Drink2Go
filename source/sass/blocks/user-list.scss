@@ -1,0 +1,16 @@
+// user-list__login
+
+// user-list__login-icon
+
+.user-list__text {
+  display: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--Base-Black);
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}

@@ -1,0 +1,19 @@
+.page-header {
+  background-color: var(--Base-White);
+}
+
+// page-header__logo
+
+// page-header__logo-image
+
+.page-header__logo-text {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--Base-Black);
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}

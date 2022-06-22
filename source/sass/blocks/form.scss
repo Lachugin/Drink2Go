@@ -1,0 +1,32 @@
+// form
+// form__price
+
+.form__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--Base-Black);
+}
+
+.form__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--Base-Black);
+}
+
+.form__wrapper {
+  border: none;
+}
+
+.form__list {
+  list-style: none;
+}
+
+.form__button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--Base-Primary);
+}
