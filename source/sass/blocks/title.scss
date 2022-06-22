@@ -1,0 +1,14 @@
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: var(--Base-Black);
+
+  @media (min-width: 768px) {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+}
