@@ -1,3 +1,18 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.user-list__item {
+  padding: 32px 20px;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+}
+
 // user-list__login
 
 // user-list__login-icon
@@ -12,5 +27,14 @@
 
   @media (min-width: 1440px) {
     display: block;
+  }
+}
+
+.user-list__toggle {
+  background: none;
+  border: none;
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }

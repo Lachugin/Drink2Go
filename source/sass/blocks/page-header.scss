@@ -2,9 +2,23 @@
   background-color: var(--Base-White);
 }
 
-// page-header__logo
+.page-header__wrapper {
+  margin: 0 auto;
+  position: relative;
+  padding: 6px 20px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+}
 
-// page-header__logo-image
+.page-header__logo {
+  display: flex;
+  gap: 20px;
+}
 
 .page-header__logo-text {
   display: none;
