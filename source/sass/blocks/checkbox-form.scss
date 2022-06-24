@@ -1,0 +1,128 @@
+.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox + label {
+	position: relative;
+	padding: 0 0 0 60px;
+	cursor: pointer;
+}
+.checkbox + label:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .2s;
+}
+.checkbox + label:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 10px;
+	background: #FFF;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	transition: .2s;
+}
+.checkbox:checked + label:before {
+	background: #9FD468;
+}
+.checkbox:checked + label:after {
+	left: 26px;
+}
+.checkbox:focus + label:before {
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+}
+
+// 
+
+.checkbox-form {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 55px;
+}
+
+.checkbox-form__style {
+  box-sizing: border-box;
+  position: absolute;
+  width: 42px;
+	height: 24px;
+  border: 2px solid #BDBDBD;
+	background: #BDBDBD;
+  border-radius: 12px;
+  margin-left: -55px;
+}
+
+.checkbox-form:checked + .checkbox-form__style {
+  border-color: #7859CF;
+	background: #7859CF;
+}
+
+.checkbox-form:disabled + .checkbox-form__style {
+  border-color: #E2E2E2;
+}
+
+.checkbox-form + .checkbox-form__style::before {
+  content: "";
+  width: 20px;
+	height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+	transition: .4s;
+}
+
+.checkbox-form:checked + .checkbox-form__style::before {
+	left: 74%;
+}
+
+
+
+.checkbox-form:disabled:checked + .checkbox-form__style::before {
+  background: #BDBDBD;
+}
+
+.checkbox-form:disabled:checked + .checkbox-form__style {
+  background: #E2E2E2;
+}
+
+
+.checkbox-form:disabled + .checkbox-form__style::before {
+  background: #F8F8F8;
+}
+
+.checkbox-form:disabled + .checkbox-form__style {
+  background: #E2E2E2;
+}
+
+.checkbox-form:focus:hover + .checkbox-form__style {
+  border-color: #9070EC;
+	background: rgba(120, 89, 207, 0.25);
+}
+
+.checkbox-form:focus:hover + .checkbox-form__style::before {
+  background: #FFFFFF;
+}
+
+.checkbox-form:focus + .checkbox-form__style {
+  border-color: #9070EC;
+}
+
+.checkbox-form:focus + .checkbox-form__style::before {
+  background: #FFFFFF;
+}

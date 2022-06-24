@@ -19,22 +19,3 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.container {
-  width: auto;
-  padding: 0 20px;
-}
-
-  @media (min-width: 768px) {
-    .container {
-      width: 728px;
-      padding: 0 20px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    .container {
-      width: 1359px;
-      padding: 0 40px;
-    }
-  }

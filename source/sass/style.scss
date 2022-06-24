@@ -11,7 +11,7 @@
 // global
 @import "global/global.scss";
 
-// blocks
+// blocks select-form.
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
@@ -27,3 +27,6 @@
 @import "blocks/page-footer.scss";
 @import "blocks/subtitle.scss";
 @import "blocks/title.scss";
+@import "blocks/checkbox-form.scss";
+@import "blocks/radio-form.scss";
+@import "blocks/select-form.scss";

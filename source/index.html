@@ -216,47 +216,61 @@
     <section class="catalog">
       <div class="catalog__wrapper">
         <div class="catalog__text">Каталог</div>
-        <h3 class="catalog__title">Главные причины выбрать Drink2Go</h3>
+        <h3 class="catalog__title">Каталог кофейных напитков</h3>
 
         <form class="form" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="form__wrapper">
             <legend class="form__title">Цена</legend>
-            <label class="form__label">
-              <input type="range" name="range-price">
-            </label>
-            <div class="form__price-list">
-              <label class="form__label">
-                <input type="text" value="0" name="price">
-              </label>
-              <label class="form__label">
-                <input type="text" value="900" name="price">
-              </label>
+            <div class="form__range-filter">
+              <div class="form__range-controls">
+                <div class="form__scale">
+                  <div class="form__bar"></div>
+                </div>
+                <div class="form__toggle form__toggle-min" tabindex="0"></div>
+                <div class="form__toggle form__toggle-max" tabindex="0"></div>
+              </div>
+              <div class="form__price-controls">
+                <label class="form__min-price form__min-price--border">
+                  <input type="form__number form__number--disabled" name="min-price" value="0">
+                </label>
+                <label class="form__max-price">
+                  <input type="number" name="max-price" value="900">
+                </label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__wrapper">
             <legend class="form__title">Наличие молока</legend>
             <ul class="form__list">
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="no-matter">
-                  <input type="radio" name="availability-of-milk" id="no-matter">
+                  <input class="radio-form" type="radio" name="availability-of-milk" id="no-matter">
+                  <span class="radio-form__style"></span>
                   Неважно
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="only-animal">
-                  <input type="radio" name="availability-of-milk" id="only-animal">
+                  <input class="radio-form" type="radio" name="availability-of-milk" id="only-animal">
+                  <span class="radio-form__style"></span>
                   Только животное
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="only-vegetable">
-                  <input type="radio" name="availability-of-milk" id="only-vegetable">
+                  <input class="radio-form" type="radio" name="availability-of-milk" id="only-vegetable">
+                  <span class="radio-form__style"></span>
                   Только растительное
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="without-milk">
-                  <input type="radio" name="availability-of-milk" id="without-milk">
+                  <input class="radio-form" type="radio" name="availability-of-milk" id="without-milk" disabled>
+                  <span class="radio-form__style"></span>
                   Без молока
                 </label>
               </li>
@@ -264,40 +278,50 @@
           </fieldset>
           <fieldset class="form__wrapper">
             <legend class="form__title">Страна произрастания</legend>
-            <ul class="form__list">
-              <li>
+            <ul class="form__list form__list--width">
+              <li class="form__item">
+                
                 <label class="form__label" for="country-of-origin-brazil">
-                  <input type="checkbox" name="brazil" id="country-of-origin-brazil">
+                  <input class="checkbox-form" type="checkbox" name="brazil" id="country-of-origin-brazil">
+                  <span class="checkbox-form__style"></span>
                   Бразилия
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="country-of-origin-ethiopia">
-                  <input type="checkbox" name="ethiopia" id="country-of-origin-ethiopia">
+                  <input class="checkbox-form" type="checkbox" name="ethiopia" id="country-of-origin-ethiopia">
+                  <span class="checkbox-form__style"></span>
                   Эфиопия
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="country-of-origin-colombia">
-                  <input type="checkbox" name="colombia" id="country-of-origin-colombia">
+                  <input class="checkbox-form" type="checkbox" name="colombia" id="country-of-origin-colombia">
+                  <span class="checkbox-form__style"></span>
                   Колумбия
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="country-of-origin-costa-rica">
-                  <input type="checkbox" name="costa-rica" id="country-of-origin-costa-rica">
+                  <input class="checkbox-form" type="checkbox" name="costa-rica" id="country-of-origin-costa-rica">
+                  <span class="checkbox-form__style"></span>
                   Коста-Рика
                 </label>
               </li>
-              <li>
+              <li class="form__item">
+                
                 <label class="form__label" for="country-of-origin-peru">
-                  <input type="checkbox" name="peru" id="country-of-origin-peru">
+                  <input class="checkbox-form" type="checkbox" name="peru" id="country-of-origin-peru">
+                  <span class="checkbox-form__style"></span>
                   Перу
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="form__button" type="submit">Сбросить фильтр</button>
+          <button class="form__button" type="reset">Сбросить фильтр</button>
         </form>
         <div class="catalog__sort-inner">
           <div class="catalog__sort-text">Сортировка:</div>

@@ -1,5 +1,91 @@
-// form
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
 // form__price
+
+.form__range-filter {
+  width: 280px;
+  margin-top: 20px;
+}
+
+.form__range-controls {
+  position: relative;
+  height: 25px;
+  margin-bottom: 15px;
+  padding-top: 14px;
+}
+
+.form__range-controls .form__scale {
+  height: 2px;
+  background: var(--Alt-Light-Grey);
+}
+
+.form__range-controls .form__bar {
+  width: 90%;
+  height: 4px;
+  background: var(--Alt-Primary-Lighter);
+}
+
+.form__range-controls .form__toggle {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid var( --Alt-Primary-Lighter);
+  background-color: var(--Base-White);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form__range-controls .form__toggle-min {
+  left: 0px;
+}
+
+.form__range-controls .form__toggle-max {
+  left: 240px;
+}
+
+.form__price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__min-price {
+  position: relative;
+}
+
+.form__min-price::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: -15%;
+  width: 10px;
+  height: 2px;
+  background: #BDBDBD;
+}
+
+.form__price-controls input {
+  box-sizing: border-box;
+  width: 125px;
+  padding: 8px 10px;
+  text-align: center;
+  color: var(--Base-Black);
+  border: 2px solid var(--Alt-Primary-Lighter);
+  border-radius: 4px;
+  background: var(--Base-White);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
 
 .form__title {
   font-weight: 600;
@@ -17,16 +103,49 @@
 
 .form__wrapper {
   border: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
 }
 
 .form__list {
   list-style: none;
 }
 
+.form__list--width {
+  margin-left: 15px;
+}
+
+.form__item {
+  margin-bottom: 20px;
+}
+
 .form__button {
+  margin-top: 10px;
+  width: 280px;
+  border: none;
+  background: #FFFFFF;
+  padding: 8px 20px;
+  border-radius: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: var(--Base-Primary);
+  transition: 0.3s;
+}
+
+.form__button:focus:hover {
+  background: #9070EC;
+  color: #FFFFFF;
+}
+
+.form__button:active {
+  background: #593CAC;
+  color: #FFFFFF;
+}
+
+.form__button:disabled {
+  background: #E2E2E2;
+  color: #FFFFFF;
 }

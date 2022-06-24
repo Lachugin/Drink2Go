@@ -1,0 +1,63 @@
+.form__label {
+  margin-bottom: 20px;
+}
+
+.radio-form {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 35px;
+}
+
+.radio-form__style {
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #BDBDBD;
+  border-radius: 50%;
+  margin-left: -35px;
+}
+
+.radio-form:checked + .radio-form__style {
+  border-color: #7859CF;
+}
+
+.radio-form:disabled + .radio-form__style {
+  border-color: #E2E2E2;
+}
+
+.radio-form:checked + .radio-form__style::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #7859CF;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio-form:disabled:checked + .radio-form__style::before {
+  background-color: #E2E2E2;
+}
+
+.radio-form:focus:hover + .radio-form__style {
+  border-color: #9070EC;
+}
+
+.radio-form:focus:hover + .radio-form__style::before {
+  background: rgba(120, 89, 207, 0.25);
+}
+
+.radio-form:focus + .radio-form__style {
+  border-color: #9070EC;
+}
+
+.radio-form:focus + .radio-form__style::before {
+  background: rgba(120, 89, 207, 0.25);
+}
+

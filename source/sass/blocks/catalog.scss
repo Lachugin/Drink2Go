@@ -1,11 +1,16 @@
-// catalog
-// catalog__wrapper
+.catalog {
+  background-color: var(--Light-Grey);
+}
+.catalog__wrapper {
+  padding: 50px 20px 60px 20px;
+}
 
 .catalog__text {
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--Base-Primary);
 }
 
@@ -14,6 +19,7 @@
   font-size: 24px;
   line-height: 36px;
   color: var(--Base-Black);
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 42px;
