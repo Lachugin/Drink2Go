@@ -1,72 +1,52 @@
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+// const navMain = document.querySelector('.site-list');
+// const navLink = document.querySelector('.site-list__link');
+// const navToggle = document.querySelector('.main-nav__toggle');
 
-navMain.classList.remove('main-nav--nojs');
+// navMain.classList.remove('site-list--nojs');
+// navLink.classList.remove('site-link-nojs');
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
+// navToggle.addEventListener('click', function() {
+//   if (navMain.classList.contains('main-nav--closed')) {
+//     navMain.classList.remove('main-nav--closed');
+//     navMain.classList.add('main-nav--opened');
+//   } else {
+//     navMain.classList.add('main-nav--closed');
+//     navMain.classList.remove('main-nav--opened');
+//   }
+// });
+
+const map = L.map('map')
+  .setView({
+    lat: 59.96831,
+    lng: 30.31748,
+  }, 16);
+
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>',
+  },
+).addTo(map);
+
+const mainPinIcon = L.icon({
+  iconUrl: '../img/map-icon.svg',
+  iconSize: [38, 50],
+  iconAnchor: [26, 52],
 });
 
-const link = document.querySelector('.js-login');
-const popup = document.querySelector('.modal');
-const close = popup.querySelector('.modal__button--close');
-const form = popup.querySelector('form');
-const login = popup.querySelector('[name=login]');
-const password = popup.querySelector('[name=password]');
+const mainPinMarker = L.marker(
+  {
+    lat: 59.96831,
+    lng: 30.31748,
+  },
+  {
+    draggable: true,
+    icon: mainPinIcon,
+  },
+);
+  
+mainPinMarker.addTo(map);
 
-let isStorageSupport = true;
-let storage = '';
-
-try {
-  storage = localStorage.getItem('login');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-link.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.add('modal--show');
-
-  if (storage) {
-    login.value = storage;
-    password.focus();
-  } else {
-    login.focus();
-  }
-});
-
-close.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.remove('modal--show');
-  popup.classList.remove('modal--error');
-});
-
-form.addEventListener('submit', function (evt) {
-  if (!login.value || !password.value) {
-    evt.preventDefault();
-    popup.classList.remove('modal--error');
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add('modal--error');
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('login', login.value);
-    }
-  }
-});
-
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-
-    if (popup.classList.contains('modal--show')) {
-      popup.classList.remove('modal--show');
-      popup.classList.remove('modal--error');
-    }
-  }
+mainPinMarker.on('moveend', (evt) => {
+  console.log(evt.target.getLatLng());
 });

@@ -5,7 +5,7 @@
 .page-header__wrapper {
   margin: 0 auto;
   position: relative;
-  padding: 6px 20px;
+  padding: 0 20px;
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -13,6 +13,12 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1440px;
+  @media (min-width: 768px) {
+    padding: 10px 20px;
+  }
+  @media (min-width: 1440px) {
+    padding: 10px 40px;
+  }
 }
 
 .page-header__logo {
@@ -29,5 +35,6 @@
 
   @media (min-width: 1440px) {
     display: block;
+    padding-top: 5px;
   }
 }
