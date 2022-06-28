@@ -1,72 +1,84 @@
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.site-list');
+const navLinks = document.querySelectorAll('.site-list__link');
+const navToggle = document.querySelector('.user-list__toggle');
 
-navMain.classList.remove('main-nav--nojs');
+navLinks.forEach(listItems => {
+  listItems.classList.remove('site-list__link--nojs');
+});
+
+navMain.classList.remove('site-list--nojs');
+navToggle.classList.remove('user-list__toggle-off-js');
 
 navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
+  if (navMain.classList.contains('site-list--active')) {
+    navMain.classList.toggle('site-list--active');
+    navToggle.classList.toggle('user-list__toggle-close');
+    navLinks.forEach(listItems => {
+      listItems.classList.toggle('site-list__link--active');
+    });
   } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
+    navToggle.classList.toggle('user-list__toggle-close');
+    navMain.classList.toggle('site-list--active');
+    navLinks.forEach(listItems => {
+      listItems.classList.toggle('site-list__link--active');
+    });
   }
 });
 
-const link = document.querySelector('.js-login');
-const popup = document.querySelector('.modal');
-const close = popup.querySelector('.modal__button--close');
-const form = popup.querySelector('form');
-const login = popup.querySelector('[name=login]');
-const password = popup.querySelector('[name=password]');
+const map = L.map('map')
+  .setView({
+    lat: 59.96831,
+    lng: 30.31748,
+  }, 16);
 
-let isStorageSupport = true;
-let storage = '';
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>',
+  },
+).addTo(map);
 
-try {
-  storage = localStorage.getItem('login');
-} catch (err) {
-  isStorageSupport = false;
-}
-
-link.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.add('modal--show');
-
-  if (storage) {
-    login.value = storage;
-    password.focus();
-  } else {
-    login.focus();
-  }
+const mainPinIcon = L.icon({
+  iconUrl: '../img/map-icon.svg',
+  iconSize: [38, 50],
+  iconAnchor: [26, 52],
 });
 
-close.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.remove('modal--show');
-  popup.classList.remove('modal--error');
+const mainPinMarker = L.marker(
+  {
+    lat: 59.96831,
+    lng: 30.31748,
+  },
+  {
+    draggable: true,
+    icon: mainPinIcon,
+  },
+);
+  
+mainPinMarker.addTo(map);
+
+mainPinMarker.on('moveend', (evt) => {
+  console.log(evt.target.getLatLng());
 });
 
-form.addEventListener('submit', function (evt) {
-  if (!login.value || !password.value) {
-    evt.preventDefault();
-    popup.classList.remove('modal--error');
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add('modal--error');
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('login', login.value);
-    }
-  }
-});
+// slider
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
+//   init Swiper:
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-products__next',
+      prevEl: '.swiper-products__prev',
+    },
+  });
 
-    if (popup.classList.contains('modal--show')) {
-      popup.classList.remove('modal--show');
-      popup.classList.remove('modal--error');
-    }
-  }
-});
+  // new-products__item--flat-white

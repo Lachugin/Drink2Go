@@ -1,0 +1,13 @@
+.maps {
+  background: url("../img/map.jpg") center (center/cover) no-repeat;
+  height: 420px;
+  width: 100%;
+  @media (min-width: 768px) {
+    height: 480px;
+    background: url("../img/map-tablet.jpg")center (center/cover) no-repeat;
+  }
+  @media (min-width: 1440px) {
+    height: 540px;
+    background: url("../img/map-desktop.jpg")center (center/cover) no-repeat;
+  }
+}

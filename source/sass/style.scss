@@ -5,24 +5,29 @@
 // variables
 @import "variables.scss";
 
-// libs
+// libs 
 @import "libs/normalize.scss";
+@import "libs/leaflet.scss";
+@import "libs/swiper-bundle.scss";
 
 // global
 @import "global/global.scss";
 
-// blocks
+// blocks select-form.
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/user-list.scss";
 @import "blocks/new-products.scss";
-@import "blocks/slider.scss";
 @import "blocks/advantages.scss";
 @import "blocks/catalog.scss";
 @import "blocks/form.scss";
-@import "blocks/map.scss";
+@import "blocks/maps.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/subtitle.scss";
 @import "blocks/title.scss";
+@import "blocks/checkbox-form.scss";
+@import "blocks/radio-form.scss";
+@import "blocks/swiper.scss";
