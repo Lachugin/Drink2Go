@@ -27,6 +27,12 @@
   }
 }
 
+.site-list__link--border {
+  @media (min-width: 768px) {
+    border-bottom: solid 2px var(--Base-Primary);
+  }
+}
+
 .site-list__link:hover {
   color: var(--Base-Primary);
 }
@@ -40,11 +46,6 @@
   background-color: var(--Base-Secondary);
 }
 
-.site-list__link--active {
-  color: var(--Base-Primary);
-  border-bottom: 1px solid var( --Base-Primary);
-}
-
 .site-list--nojs {
   left: 0;
   right: 0;
@@ -56,13 +57,38 @@
   flex-direction: column;
   align-items: center;
   z-index: 9;
+  flex-grow: 1;
 }
 
-// бургер меню
-.site-list__item--active {
+.site-list__link--nojs {
   display: flex;
+  width: 320px;
   background: var(--Base-White);
   justify-content: center;
   border-top: solid 1px var(--Base-Secondary);
   border-bottom: solid 1px var(--Base-Secondary);
+
+}
+
+.site-list__link--active {
+  display: flex;
+  width: 320px;
+  background: var(--Base-White);
+  justify-content: center;
+  border-top: solid 1px var(--Base-Secondary);
+  border-bottom: solid 1px var(--Base-Secondary);
+
+}
+
+.site-list--active {
+  left: 0;
+  right: 0;
+  top: 60px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
 }

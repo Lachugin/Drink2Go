@@ -87,7 +87,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #7859CF;
+  color: var(--Base-Primary);
 }
 
 .catalog__sort {
@@ -133,6 +133,12 @@
   }
   @media (min-width: 1440px) {
     max-width: 318px;
+  }
+}
+
+.catalog__item--shadow {
+  @media (min-width: 1440px) {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   }
 }
 

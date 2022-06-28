@@ -1,50 +1,3 @@
-.checkbox {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	margin: 10px 0 0 20px;
-}
-.checkbox + label {
-	position: relative;
-	padding: 0 0 0 60px;
-	cursor: pointer;
-}
-.checkbox + label:before {
-	content: '';
-	position: absolute;
-	top: -4px;
-	left: 0;
-	width: 50px;
-	height: 26px;
-	border-radius: 13px;
-	background: #CDD1DA;
-	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
-	transition: .2s;
-}
-.checkbox + label:after {
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: 2px;
-	width: 22px;
-	height: 22px;
-	border-radius: 10px;
-	background: #FFF;
-	box-shadow: 0 2px 5px rgba(0,0,0,.3);
-	transition: .2s;
-}
-.checkbox:checked + label:before {
-	background: #9FD468;
-}
-.checkbox:checked + label:after {
-	left: 26px;
-}
-.checkbox:focus + label:before {
-	box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
-}
-
-// 
-
 .checkbox-form {
   position: absolute;
   width: 1px;
@@ -59,26 +12,26 @@
   position: absolute;
   width: 42px;
 	height: 24px;
-  border: 2px solid #BDBDBD;
-	background: #BDBDBD;
+  border: 2px solid var(--Base-Grey);
+	background: var(--Base-Grey);
   border-radius: 12px;
   margin-left: -55px;
 }
 
 .checkbox-form:checked + .checkbox-form__style {
-  border-color: #7859CF;
-	background: #7859CF;
+  border-color: var(--Base-Primary);
+	background: var(--Base-Primary);
 }
 
 .checkbox-form:disabled + .checkbox-form__style {
-  border-color: #E2E2E2;
+  border-color: var(--Alt-Light-Grey);
 }
 
 .checkbox-form + .checkbox-form__style::before {
   content: "";
   width: 20px;
 	height: 20px;
-  background: #FFFFFF;
+  background: var(--Base-White);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -94,35 +47,35 @@
 
 
 .checkbox-form:disabled:checked + .checkbox-form__style::before {
-  background: #BDBDBD;
+  background: var(--Base-Grey);
 }
 
 .checkbox-form:disabled:checked + .checkbox-form__style {
-  background: #E2E2E2;
+  background: var(--Alt-Light-Grey);
 }
 
 
 .checkbox-form:disabled + .checkbox-form__style::before {
-  background: #F8F8F8;
+  background: var(--Light-Grey);
 }
 
 .checkbox-form:disabled + .checkbox-form__style {
-  background: #E2E2E2;
+  background: var(--Alt-Light-Grey);
 }
 
 .checkbox-form:focus:hover + .checkbox-form__style {
-  border-color: #9070EC;
-	background: rgba(120, 89, 207, 0.25);
+  border-color: var(--Alt-Primary-Lighter);
+	background: var(--Alt-Primary-Opacity);
 }
 
 .checkbox-form:focus:hover + .checkbox-form__style::before {
-  background: #FFFFFF;
+  background: var(--Base-White);
 }
 
 .checkbox-form:focus + .checkbox-form__style {
-  border-color: #9070EC;
+  border-color: var(--Alt-Primary-Lighter);
 }
 
 .checkbox-form:focus + .checkbox-form__style::before {
-  background: #FFFFFF;
+  background: var--Base-White;
 }

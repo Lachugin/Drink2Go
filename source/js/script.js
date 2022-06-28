@@ -1,19 +1,29 @@
-// const navMain = document.querySelector('.site-list');
-// const navLink = document.querySelector('.site-list__link');
-// const navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.site-list');
+const navLinks = document.querySelectorAll('.site-list__link');
+const navToggle = document.querySelector('.user-list__toggle');
 
-// navMain.classList.remove('site-list--nojs');
-// navLink.classList.remove('site-link-nojs');
+navLinks.forEach(listItems => {
+  listItems.classList.remove('site-list__link--nojs');
+});
 
-// navToggle.addEventListener('click', function() {
-//   if (navMain.classList.contains('main-nav--closed')) {
-//     navMain.classList.remove('main-nav--closed');
-//     navMain.classList.add('main-nav--opened');
-//   } else {
-//     navMain.classList.add('main-nav--closed');
-//     navMain.classList.remove('main-nav--opened');
-//   }
-// });
+navMain.classList.remove('site-list--nojs');
+navToggle.classList.remove('user-list__toggle-off-js');
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('site-list--active')) {
+    navMain.classList.toggle('site-list--active');
+    navToggle.classList.toggle('user-list__toggle-close');
+    navLinks.forEach(listItems => {
+      listItems.classList.toggle('site-list__link--active');
+    });
+  } else {
+    navToggle.classList.toggle('user-list__toggle-close');
+    navMain.classList.toggle('site-list--active');
+    navLinks.forEach(listItems => {
+      listItems.classList.toggle('site-list__link--active');
+    });
+  }
+});
 
 const map = L.map('map')
   .setView({
@@ -50,3 +60,25 @@ mainPinMarker.addTo(map);
 mainPinMarker.on('moveend', (evt) => {
   console.log(evt.target.getLatLng());
 });
+
+// slider
+
+//   init Swiper:
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-products__next',
+      prevEl: '.swiper-products__prev',
+    },
+  });
+
+  // new-products__item--flat-white

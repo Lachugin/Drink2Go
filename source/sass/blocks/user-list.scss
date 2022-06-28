@@ -46,12 +46,34 @@
 }
 
 .user-list__toggle {
-  background: none;
   border: none;
-
+  background: none;
+  background-image: url("../img/button-open.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 21px;
+  height: 20px;
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.user-list__toggle-close {
+  border: none;
+  background: none;
+  background-image: url("../img/button-close.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  width: 21px;
+  height: 20px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.user-list__toggle-off-js {
+  display: none;
 }
 
 .user-list__text:hover {
